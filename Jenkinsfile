@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Clone') {
             steps {
-                git clone 'https://github.com/kaif47/masti2.git'
+                bat 'git clone "https://github.com/kaif47/masti2.git"'
             }
         }
         stage('Build') {
