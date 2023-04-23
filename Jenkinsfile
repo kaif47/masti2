@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploying the project..."
-                cp -R * "C:/xampp/htdocs/"
+                cmd 'cp -R * "C:/xampp/htdocs/"'
             }
         }
     }
