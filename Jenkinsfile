@@ -20,11 +20,5 @@ pipeline {
                 sh 'echo "Testing the project..."'
             }
         }
-        stage('Deploy') {
-            steps {
-                sh 'echo "Deploying the project..."'
-                sh 'cp -r * C:/xampp/htdocs'
-            }
-        }
     }
 }
