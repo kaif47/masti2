@@ -11,19 +11,18 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'echo "Building the project..."'
-                bat 'dir'
+                echo "Building the project..."
             }
         }
         stage('Test') {
             steps {
-                bat 'echo "Testing the project..."'
+                echo "Testing the project..."
             }
         }
         stage('Deploy') {
             steps {
-                bat 'echo "Deploying the project..."'
-                bat 'xcopy /s * "C:/xampp/htdocs/"'
+                echo "Deploying the project..."
+                xcopy /s * "C:/xampp/htdocs/"
             }
         }
     }
