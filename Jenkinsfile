@@ -9,6 +9,11 @@ pipeline {
                 userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/kaif47/masti2.git']]])
             }
         }
+        stage('Clone') {
+            steps {
+                git clone 'https://github.com/kaif47/masti2.git'
+            }
+        }
         stage('Build') {
             steps {
                 echo "Building the project..."
@@ -22,7 +27,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploying the project..."
-                bat 'xcopy C:/Users/Kaif Bijali/ "C:/xampp/htdocs"'
+                bat 'xcopy C:/Users/Kaif Bijali/masti2 "C:/xampp/htdocs"'
             }
         }
     }
