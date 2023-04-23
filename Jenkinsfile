@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploying the project..."
-                bat 'xcopy "C:/xampp/htdocs/"'
+                bat 'xcopy C:/Users/Kaif Bijali/ "C:/xampp/htdocs"'
             }
         }
     }
